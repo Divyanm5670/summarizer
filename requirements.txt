@@ -1,9 +1,9 @@
 streamlit
-pydantic
 openai
+python-dotenv
+pydantic
 PyPDF2
 python-docx
 newspaper3k
-lxml
+lxml[html_clean]
 youtube-transcript-api
-python-dotenv
