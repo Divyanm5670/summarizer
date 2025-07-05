@@ -7,12 +7,15 @@ from newspaper import Article
 from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled, NoTranscriptFound
 from openai import OpenAI
 from dotenv import load_dotenv
-
-
 load_dotenv()
 
 
 api_key = os.getenv("API_KEY")
+if not api_key:
+    try:
+        api_key = st.secrets["API_KEY"]
+    except FileNotFoundError:
+        api_key = None
 # -------------------------------------------
 # ✅ Samaira OpenAI client setup
 # -------------------------------------------
