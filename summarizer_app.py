@@ -6,12 +6,18 @@ from docx import Document
 from newspaper import Article
 from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled, NoTranscriptFound
 from openai import OpenAI
+from dotenv import load_dotenv
 
+
+load_dotenv()
+
+
+api_key = os.getenv("API_KEY")
 # -------------------------------------------
 # ✅ Samaira OpenAI client setup
 # -------------------------------------------
 client = OpenAI(
-    api_key="b79f26cc155d387cdcf0dc98ea4c89ecb31484ead5ee426b826654d79b9537f2",
+    api_key=api_key,
     base_url="https://inference.samaira.ai/openai/v1"
 )
 
