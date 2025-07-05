@@ -113,7 +113,7 @@ def extract_text_from_youtube(url: str) -> str:
 # -------------------------------------------
 # ✅ Streamlit UI
 # -------------------------------------------
-st.title("📄✨ Pydantic-AI Summarizer")
+st.title("📄✨ Unified AI Summarizer")
 
 # 👉 Select input type in sidebar
 with st.sidebar:
